@@ -3,7 +3,7 @@ Document Processing and Retrieval-Augmented QA System
 
 This repository contains a collection of Python scripts designed to automate the conversion of web content to PDFs, process those PDFs into a searchable vector index using FAISS, and utilize that index in a retrieval-augmented QA system. These tools are built on top of powerful libraries such as OpenAI's language models, BeautifulSoup for HTML parsing, pandas for data manipulation, and FAISS for efficient similarity search.
 
-The langchain templates were created to align job postings with college program descriptions but they can be easily modified for your specific needs.
+The langchain templates were created to align job postings with college program descriptions but they can be easily modified for your specific needs by modify the template variable in the rag_qa.py file.
 
 Overview
 --------
@@ -24,11 +24,12 @@ Getting Started
 
 1.  **Clone the repository**:
 
-git clone git@github.com:akianja/career-app.git
-cd your-repo-name
+*   git clone git@github.com:akianja/career-app.git
+*   cd your-repo-name
 
 2.  **Install the required dependencies:**:
-pip install -r requirements.txt
+
+*   pip install -r requirements.txt
 
 ### Configuration
 
@@ -40,17 +41,18 @@ pip install -r requirements.txt
 ### Running the Scripts
 
 1.  **Convert web content to PDFs**:
-python download.py
 
-Ensure `codes.xlsx` is in the root directory and properly formatted.
+*   python download.py*   
+*   Ensure `codes.xlsx` is in the root directory and properly formatted.
 
 2.  **Create a FAISS index from PDFs**:
-python pdf_to_faiss.py
 
-This script processes all PDFs in `downloaded_pdfs` and generates a `faiss_index` file.
+*   python pdf_to_faiss.py
+*   This script processes all PDFs in `downloaded_pdfs` and generates a `faiss_index` file.
 
-**Run the retrieval-augmented QA system**:
+3. **Run the retrieval-augmented QA system**:
 
 **Launch Chainlit**:
-chainlit run rag_qa.py -w
+
+*   chainlit run rag_qa.py -w
 
